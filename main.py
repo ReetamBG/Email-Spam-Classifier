@@ -37,7 +37,7 @@ if st.button("Analyze"):
     text_vector = vectorizer.transform([text_preprocessed])    # note that vectorizer needs an array of strings
     prediction = estimator.predict(text_vector)
     if prediction == 0:
-        st.write('No spam good good')
+        st.subheader("Analysis: No spam Good good 😏")
     else:
-        st.write('Yajibu alayka an tastaghfirullah!!')
+        st.write('Yajibu alayka an tastaghfirullah!! 🤨')
 
