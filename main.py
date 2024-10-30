@@ -39,5 +39,5 @@ if st.button("Analyze"):
     if prediction == 0:
         st.subheader("Analysis: No spam Good good 😏")
     else:
-        st.write('Yajibu alayka an tastaghfirullah!! 🤨')
+        st.subheader('Analysis: Yajibu alayka an tastaghfirullah!! 🤨')
 
