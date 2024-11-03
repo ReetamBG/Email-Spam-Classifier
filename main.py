@@ -7,7 +7,7 @@ from nltk.stem.porter import PorterStemmer
 import re
 
 
-Check if 'punkt' is downloaded
+# Check if 'punkt' is downloaded
 try:
     nltk.data.find('tokenizers/punkt')
     print("Punkt tokenizer is already downloaded.")
