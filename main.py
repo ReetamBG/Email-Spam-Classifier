@@ -13,7 +13,7 @@ try:
     print("Punkt tokenizer is already downloaded.")
 except LookupError:
     print("Punkt tokenizer not found. Downloading now...")
-    nltk.download('punkt')
+    nltk.download('punkt_tab')
 
 
 estimator = pickle.load(open('estimator', 'rb'))
