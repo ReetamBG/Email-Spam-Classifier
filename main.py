@@ -1,13 +1,23 @@
 import streamlit as st
 import pickle
+import string
 import nltk
-from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
 import re
 
 
+# Check if 'punkt' is downloaded
+# try:
+#     nltk.data.find('tokenizers/punkt')
+#     print("Punkt tokenizer is already downloaded.")
+# except LookupError:
+#     print("Punkt tokenizer not found. Downloading now...")
+#     nltk.download('punkt')
+
+
 estimator = pickle.load(open('estimator', 'rb'))
-# text_preprocessor = pickle.load(open('text_preprocessor', 'rb'))    not working for some reason
+# preprocess_text = pickle.load(open('text_preprocessor', 'rb'))    # not working for some reason
 vectorizer = pickle.load(open('vectorizer', 'rb'))
 
 
