@@ -7,13 +7,13 @@ from nltk.stem.porter import PorterStemmer
 import re
 
 
-# Check if 'punkt' is downloaded
-# try:
-#     nltk.data.find('tokenizers/punkt')
-#     print("Punkt tokenizer is already downloaded.")
-# except LookupError:
-#     print("Punkt tokenizer not found. Downloading now...")
-#     nltk.download('punkt')
+Check if 'punkt' is downloaded
+try:
+    nltk.data.find('tokenizers/punkt')
+    print("Punkt tokenizer is already downloaded.")
+except LookupError:
+    print("Punkt tokenizer not found. Downloading now...")
+    nltk.download('punkt')
 
 
 estimator = pickle.load(open('estimator', 'rb'))
