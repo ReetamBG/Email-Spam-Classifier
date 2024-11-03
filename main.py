@@ -6,6 +6,7 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 import re
 
+nltk.download('punkt_tab')
 
 estimator = pickle.load(open('estimator', 'rb'))
 # preprocess_text = pickle.load(open('text_preprocessor', 'rb'))    # not working for some reason
@@ -13,14 +14,6 @@ vectorizer = pickle.load(open('vectorizer', 'rb'))
 
 
 def preprocess_text(text):
-
-    # Check if 'punkt' is downloaded
-    try:
-        nltk.data.find('tokenizers/punkt')
-        print("Punkt tokenizer is already downloaded.")
-    except LookupError:
-        print("Punkt tokenizer not found. Downloading now...")
-        nltk.download('punkt')
 
     text = text.lower()
     words = nltk.word_tokenize(text)
