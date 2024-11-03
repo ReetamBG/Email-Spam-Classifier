@@ -6,7 +6,9 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 import re
 
+# need to add this for streamlit to download it in server
 nltk.download('punkt_tab')
+nltk.download('stopwords')
 
 estimator = pickle.load(open('estimator', 'rb'))
 # preprocess_text = pickle.load(open('text_preprocessor', 'rb'))    # not working for some reason
